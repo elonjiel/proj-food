@@ -1,15 +1,32 @@
+import {Routes, Route, Outlet} from "react-router-dom"
+import Home from "./pages/Home"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import RecipeDetail from "./pages/RecipeDetail"
 
-import './App.css'
+function Layout(){
+  return (
+    <>
+    <Navbar/>
+      <Outlet/>
+    <Footer/>
+    </>
+  )
+}
 
 function App() {
 
 
   return (
   
-      <div>
-       <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <div className="bg-black">
+        <Routes>
+          <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='recipes/:id' element={<RecipeDetail />} />
+          </Route>
+        </Routes>
+
       </div>
   )
 }
