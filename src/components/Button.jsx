@@ -7,7 +7,7 @@ function Button({ isDisabled, btnType, containerStyle, textStyle, title, rightIc
     <button disabled={isDisabled ?? false}
         type={btnType || "button" }
         className={`custom-Btn ${containerStyle}`}
-        onclick={handleClick}
+        onClick={handleClick}
     >
         <span className='flex-1'>{title}</span>
             {rightIcon && <div className='relative w-6 h-6'>
