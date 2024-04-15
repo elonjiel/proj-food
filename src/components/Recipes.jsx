@@ -18,43 +18,40 @@ function Recipes() {
   }
 
   const fetchRecipe = async () => {
-    try {
-        const data = await fetchRecipes({ query, limit })
+        try {
+            const data = await fetchRecipes({ query, limit })
 
-        setRecipes(data)
+            setRecipes(data)
 
-        setLoading(false)
-    } catch (error) {
-        console.log(error)
-    } finally {
-        setLoading(false)
-    }
-    }
+            setLoading(false)
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setLoading(false)
+        }
+   }
 
-    const showMore = () => {
-        setLimit(prev => prev + 10)
+   const showMore = () => {
+        setLimit(prev => prev + 8)
         fetchRecipe()
-    }
+   }
 
 
-    useEffect(() => {
+   useEffect(() => {
         setLoading(true)
         fetchRecipe()
 
-    }, [])
+   }, [])
   
-
-    const handleSearchedRecipe = async (e) => {
+   const handleSearchedRecipe = async (e) => {
         e.preventDefault()
         fetchRecipe()
-    }
-
-
-  if(loading){
+   }
+   if(loading){
         return(
             <Loading />
         )
-  }
+   }
 
   return (
     <div className="w-full">
@@ -82,7 +79,7 @@ function Recipes() {
                     <div className="w-full flex items-center justify-center py-10">
                     <Button
                                 title="Show More"
-                                containerStyle="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm"
+                                containerStyle="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm"
                                 handleClick={showMore}
                             />
                     </div>

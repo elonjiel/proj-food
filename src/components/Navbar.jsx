@@ -17,19 +17,19 @@ function Navbar() {
             </a>  
             <ul className="hidden md:flex text-white gap-6">
                  <li>
-                     <a href="/">Home</a>
+                     <a href="/" className="hover:text-yellow-300">Home</a>
                  </li>
                  <li>
-                     <a href="/#recipes">Explore</a>
+                     <a href="/#recipes" className="hover:text-yellow-300">Explore</a>
                  </li>
                  <li>
-                     <a href="/favorites">Favorites</a>
+                     <a href="/favorites" className="hover:text-yellow-300">Favorites</a>
                  </li>
             </ul>
 
             <Button
                 title="Sign In"
-                containerStyle= "hidden md:block bg-transparent border border-white text-white hover:bg-white hover:text-slate-700 rounded-full min-w-[130px]"
+                containerStyle= "hidden md:block bg-transparent border border-white text-white hover:border-yellow-300 hover:text-yellow-300 rounded-full min-w-[130px]"
             />
 
             <button className="block md:hidden text-white text-xl" 

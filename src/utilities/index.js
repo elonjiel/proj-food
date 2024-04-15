@@ -14,7 +14,7 @@ export async function fetchRecipes (filter){
       }
   
       const data = await response.json();
-      console.log(data)
+      // console.log(data)
       return data?.hits;
     } catch (error) {
       console.error('Error fetching recipes:', error);
@@ -22,7 +22,22 @@ export async function fetchRecipes (filter){
     }
   }
 
-
-//   https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${apiKey}
-
-// https://www.edamam.com/ontologies/edamam.owl#recipe_3386c47678694b3aa6301e53a7e829f1
+  export async function fetchRecipe (id){
+    const url = `https://api.edamam.com/search?r=http://www.edamam.com/ontologies/edamam.owl%23&app_id=${id}&app_key=${key}`;
+   
+    try {
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch recipes');
+      }
+  
+      const data = await response.json();
+ 
+      return data[0];
+      
+    } catch (error) {
+      console.error('Error fetching recipes:', error);
+      return null; 
+    }
+  }
