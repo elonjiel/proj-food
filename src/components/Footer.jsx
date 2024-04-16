@@ -6,7 +6,7 @@ import React from 'react'
 function Footer() {
   return (
     <footer className="text-white py-10 bg_gradient ">
-            <div className="container mx-auto px-20 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-800">
+            <div className="container mx-auto px-20 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-700">
                 <div className="flex">
                     <p className="font-bold text-center text-lg">
                         Flavor<span className="text-yellow-300">Fusion</span>

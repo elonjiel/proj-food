@@ -23,7 +23,7 @@ function Navbar() {
                      <a href="/#recipes" className="hover:text-yellow-300">Explore</a>
                  </li>
                  <li>
-                     <a href="/favorites" className="hover:text-yellow-300">Favorites</a>
+                     <a href="/" className="hover:text-yellow-300">Contact Us</a>
                  </li>
             </ul>
 
@@ -42,7 +42,7 @@ function Navbar() {
             <div className={`${open ? "flex" : "hidden"} bg-black flex-col w-full px-4 pt-5 pb-8 text-white gap-6 text-[14px]`}>
                 <a href="/">Home</a>
                 <a href="/#recipes">Recipes</a>
-                <a href="/">Favorites</a>
+                <a href="/">Contact Us</a>
             </div>
         
     </header>

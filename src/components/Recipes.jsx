@@ -9,7 +9,7 @@ import Button from './Button'
 function Recipes() {
 
   const [recipes, setRecipes] = useState([])
-  const [query, setQuery] = useState("pinoy")
+  const [query, setQuery] = useState("omelette")
   const [limit, setLimit] = useState(24)
   const [loading, setLoading] = useState(false)
 
@@ -29,11 +29,6 @@ function Recipes() {
         } finally {
             setLoading(false)
         }
-   }
-
-   const showMore = () => {
-        setLimit(prev => prev + 8)
-        fetchRecipe()
    }
 
 
@@ -77,11 +72,8 @@ function Recipes() {
                     </div>
 
                     <div className="w-full flex items-center justify-center py-10">
-                    <Button
-                                title="Show More"
-                                containerStyle="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm"
-                                handleClick={showMore}
-                            />
+                    <p className="bg-transparent text-white px-3 py-1 text-md">Uncover more recipes using the Search Bar.</p>
+
                     </div>
                 </>
             ) : <div className="text-white w-full items-center justify-center py-10">
